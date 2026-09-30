@@ -56,7 +56,7 @@ function FiveAdsContainer() {
 
 export default function App() {
   const TARGET_URL = 'https://glamourpicklessteward.com/udxbksznss?key=0f3fabd9e1807a38532b233a146ab5a8';
-  const INITIAL_SECONDS = 30;
+  const INITIAL_SECONDS = 3;
 
   const [step, setStep] = useState<'timer' | 'video'>('timer');
   const [timeLeft, setTimeLeft] = useState<number>(INITIAL_SECONDS);
@@ -302,7 +302,7 @@ export default function App() {
           <line x1="21" y1="115" x2="33" y2="115" stroke="#111827" stroke-width="4.5"/>
         </svg>
         <div class="timer-display">
-          <span class="timer-number" id="countdown">30</span>
+          <span class="timer-number" id="countdown">3</span>
           <span class="timer-label">sec</span>
         </div>
       </div>
@@ -340,7 +340,7 @@ export default function App() {
   <!-- ১০০% নিখুঁত ও মসৃণ টাইমস্ট্যাম্প টাইমার স্ক্রিপ্ট -->
   <script>
     (function() {
-      var totalSeconds = 30;
+      var totalSeconds = 3;
       var durationMs = totalSeconds * 1000;
       var startTime = Date.now();
       var maxCircumference = 490.08;
@@ -364,7 +364,7 @@ export default function App() {
           circleEl.setAttribute('stroke-dashoffset', offset);
         }
 
-        // ৩০ সেকেন্ড পূর্ণ হলে সাথে সাথে ইমেজ পেজ আসবে
+        // ৩ সেকেন্ড পূর্ণ হলে সাথে সাথে ইমেজ পেজ আসবে
         if (elapsedMs >= durationMs) {
           clearInterval(timerInterval);
           if (pageTimer) pageTimer.style.display = 'none';
@@ -532,10 +532,10 @@ export default function App() {
             <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
               <div>
                 <h2 className="text-sm font-bold text-slate-800">
-                  সম্পূর্ণ প্রজেক্টের চূড়ান্ত HTML কোড (টাইমার ফিক্সড)
+                  সম্পূর্ণ প্রজেক্টের চূড়ান্ত HTML কোড (৩ সেকেন্ড টাইমার)
                 </h2>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  টাইমার এখন মিলিসেকেন্ড ভিত্তিতে ১০০% সঠিক সময়ে সেকেন্ড কমবে
+                  টাইমার এখন ৩ সেকেন্ড কাউন্টডাউন করে সাথে সাথে ইমেজ দেখাবে
                 </p>
               </div>
               <button
@@ -554,7 +554,7 @@ export default function App() {
 
             <div className="px-5 py-3 border-t border-slate-200 flex items-center justify-between bg-slate-50">
               <span className="text-xs text-slate-500">
-                ৩০ সেকেন্ড কাউন্টডাউন মসৃণভাবে সম্পন্ন হবে
+                ৩ সেকেন্ড কাউন্টডাউন মসৃণভাবে সম্পন্ন হবে
               </span>
               <div className="flex gap-2">
                 <button

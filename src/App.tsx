@@ -1,5 +1,47 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// 468x60 Banner Ad rendered at the very top
+function TopBannerAd() {
+  const adHtml = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; display: flex; justify-content: center; align-items: center; background: transparent; }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    atOptions = {
+      'key' : '280410b8223e51dae425f09c7a2f0eb1',
+      'format' : 'iframe',
+      'height' : 60,
+      'width' : 468,
+      'params' : {}
+    };
+  </script>
+  <script type="text/javascript" src="https://glamourpicklessteward.com/280410b8223e51dae425f09c7a2f0eb1/invoke.js"></script>
+</body>
+</html>`;
+
+  return (
+    <div className="w-full flex justify-center items-center pt-1 pb-1 overflow-x-auto">
+      <div className="w-[468px] max-w-full h-[60px] flex items-center justify-center shrink-0">
+        <iframe
+          title="top-header-banner-468x60"
+          srcDoc={adHtml}
+          width={468}
+          height={60}
+          className="w-[468px] h-[60px] border-0 overflow-hidden block"
+          scrolling="no"
+          sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation"
+        />
+      </div>
+    </div>
+  );
+}
+
 // Single 300x250 Banner Ad rendered inside an isolated iframe
 function AdBanner({ id }: { id: number }) {
   const adHtml = `<!DOCTYPE html>
@@ -92,7 +134,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center p-0 m-0 select-none font-sans">
-      {/* Main Content: Starts flush at the very top, zero wasted space */}
+      {/* 468x60 Banner Ad - Placed at the very top of everything */}
+      <TopBannerAd />
+
+      {/* Main Content */}
       <main className="w-full flex flex-col items-center p-0 m-0">
         {step === 'timer' ? (
           /* PAGE 1: 3-SECOND STOPWATCH TIMER */

@@ -1,0 +1,6 @@
+{
+  "name": "30 Second Timer Redirect",
+  "description": "30-second countdown timer page that transitions to a clickable video player image linking to target destination.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

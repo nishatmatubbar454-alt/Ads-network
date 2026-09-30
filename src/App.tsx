@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 // 468x60 Banner Ad rendered at the very top
-function TopBannerAd() {
+function TopBannerAd({ id = 1 }: { id?: number }) {
   const adHtml = `<!DOCTYPE html>
 <html>
 <head>
@@ -26,10 +26,10 @@ function TopBannerAd() {
 </html>`;
 
   return (
-    <div className="w-full flex justify-center items-center pt-1 pb-1 overflow-x-auto">
+    <div className="w-full flex justify-center items-center overflow-x-auto">
       <div className="w-[468px] max-w-full h-[60px] flex items-center justify-center shrink-0">
         <iframe
-          title="top-header-banner-468x60"
+          title={`top-header-banner-${id}`}
           srcDoc={adHtml}
           width={468}
           height={60}
@@ -134,8 +134,11 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col items-center p-0 m-0 select-none font-sans">
-      {/* 468x60 Banner Ad - Placed at the very top of everything */}
-      <TopBannerAd />
+      {/* 2x 468x60 Banner Ads - Placed at the very top */}
+      <div className="w-full flex flex-col items-center gap-1 pt-1 pb-1">
+        <TopBannerAd id={1} />
+        <TopBannerAd id={2} />
+      </div>
 
       {/* Main Content */}
       <main className="w-full flex flex-col items-center p-0 m-0">
@@ -223,18 +226,18 @@ export default function App() {
             </p>
           </div>
         ) : (
-          /* PAGE 2: ORIGINAL SIZED CLICKABLE VIDEO PLAYER IMAGE */
+          /* PAGE 2: SLIGHTLY SMALLER CLICKABLE VIDEO PLAYER IMAGE */
           <div className="w-full flex flex-col items-center justify-center px-4 pt-2">
             <a
               href={TARGET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block cursor-pointer mx-auto max-w-md w-full text-center"
+              className="inline-block cursor-pointer mx-auto max-w-[340px] w-full text-center"
             >
               <img
                 src="https://i.ibb.co.com/pjh6bp9G/Screenshot-20260928-141210.jpg"
                 alt="Video Player"
-                className="max-w-full h-auto block mx-auto"
+                className="max-w-full h-auto block mx-auto rounded-xs"
               />
             </a>
           </div>

@@ -178,13 +178,13 @@ export default function App() {
             </p>
           </div>
         ) : (
-          /* PAGE 2: PURE FLUSH VIDEO PLAYER IMAGE AT TOP */
-          <div className="w-full flex flex-col items-center justify-center p-0 m-0">
+          /* PAGE 2: ORIGINAL SIZED CLICKABLE VIDEO PLAYER IMAGE */
+          <div className="w-full flex flex-col items-center justify-center px-4 pt-2">
             <a
               href={TARGET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block cursor-pointer mx-auto max-w-full leading-none"
+              className="inline-block cursor-pointer mx-auto max-w-md w-full text-center"
             >
               <img
                 src="https://i.ibb.co.com/pjh6bp9G/Screenshot-20260928-141210.jpg"

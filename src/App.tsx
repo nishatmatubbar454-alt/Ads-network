@@ -226,13 +226,13 @@ export default function App() {
             </p>
           </div>
         ) : (
-          /* PAGE 2: SLIGHTLY SMALLER CLICKABLE VIDEO PLAYER IMAGE */
+          /* PAGE 2: COMPACT CLICKABLE VIDEO PLAYER IMAGE */
           <div className="w-full flex flex-col items-center justify-center px-4 pt-2">
             <a
               href={TARGET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block cursor-pointer mx-auto max-w-[340px] w-full text-center"
+              className="inline-block cursor-pointer mx-auto max-w-[270px] w-full text-center"
             >
               <img
                 src="https://i.ibb.co.com/pjh6bp9G/Screenshot-20260928-141210.jpg"
